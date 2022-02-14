@@ -1,0 +1,184 @@
+:root {
+    --light-yellow: #FBF3DB;
+    --yellow: #FBF3AB;
+    --light-pink: #F0B9DD;
+    --lavender: #C7B9FF;
+    --deep-pink: #F04C86;
+    --raisin: #2B283A;
+    --white: #fff;
+  }
+  
+  html, body {
+      margin: 0;
+      padding: 0;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      color: var(--raisin);
+      background-color: var(--light-yellow);
+      padding: 2em;
+      font-family: 'Karla', sans-serif;
+      margin: 0 auto;
+  }
+  
+  h1 {
+      text-align: center;
+  }
+  
+  form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+  }
+  
+  form * {
+     padding: .5em;
+     font-size: 1.3rem;
+     font-family: inherit;       
+  }
+  
+  form label,
+  form button {
+     font-weight: 700;
+  }
+  
+  form *:not(label):not(div),
+  .result {
+      box-sizing: border-box;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      border-radius: 5px;
+      border: none;
+      line-height: 2rem;
+  }
+  
+  select { 
+      background: var(--white);
+      color: var(--raisin);
+  }
+  
+  .result {
+      background: var(--light-pink);
+      color: var(--raisin);
+      min-width: 300px;
+      max-width: 5ch;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      padding: 1em;
+      font-size: 1.5rem;
+  }
+  
+  .result span {
+      color: var(--deep-pink);
+      font-weight: 700;
+  }
+  
+  button {
+      color: var(--white);
+      background: var(--deep-pink);
+  }
+  
+  button:hover,
+  button:focus {
+      transform: scale(1.02);
+      cursor: pointer;  
+  }
+  
+  #wrapper {
+      border: 1px solid var(--deep-pink);
+      border-radius: 5px;
+      padding: 50px 10px 10px 10px;
+      background-color: var(--yellow);
+      min-height: 665px;
+  }
+  
+  /* Error message */
+  #error {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 1000;
+      line-height: 1rem;
+      color: var(--raisin);
+      margin: 20px 0;
+      border-radius: 5px;
+  }
+  
+  .show-error {
+      border: 4px solid var(--deep-pink);
+      background-color: var(--lavender);
+  }
+  
+  /* Add a border to the selects so that they don't move 
+  when the error border is applied */
+  #food-select, #transport-select {
+      border: 2px var(--yellow) solid !important;
+  }
+  
+  
+  /* Add balloons styling */
+  #check-btn {
+      padding: 0;
+      margin: -10px 0 20px 0;
+  }
+  
+  #check-btn label {
+      text-align: center;
+  }
+  
+  #check-btn input {
+      position: relative;
+      left: 260px;
+      top: 35px;
+      z-index: 1;
+  }
+  
+  #check-btn span {
+      display: block;
+      color: white;
+      background-color: var(--light-pink);
+      transition: background-color 0.3s;
+  }
+  
+  #check-btn span:hover {
+      background: var(--lavender);
+      transition: background-color 0.3s;
+  }
+  
+  #check-btn input:checked + span {
+      background-color: var(--raisin);
+      color: #fff;
+      transition: background-color 0.3s;
+  }
+  
+  #check-btn input:checked + span:hover {
+      background-color: var(--lavender);
+      color: #fff;
+      transition: background-color 0.3s;
+  }
+
+.highlight {
+    animation-duration: 1.2s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.07);
+    }
+
+    35% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
