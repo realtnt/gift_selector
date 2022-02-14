@@ -42,11 +42,11 @@ function calculate() {
 }
 
 foodselectEl.addEventListener("change", function () {
-    foodselectEl.setAttribute("style", "border: 2px green solid !important;")
+    foodselectEl.setAttribute("style", "border: 2px #FBF3AB solid !important;")
 })
 
 transportselectEl.addEventListener("change", function () {
-    transportselectEl.setAttribute("style", "border: 2px green solid !important;")
+    transportselectEl.setAttribute("style", "border: 2px #FBF3AB solid !important;")
 })
 
 ballooncheckboxEl.addEventListener("click", function () {
