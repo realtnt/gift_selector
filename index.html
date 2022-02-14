@@ -31,13 +31,12 @@
             </select>
             <br>
             <div id="check-btn">
-                <label for="balloon-checkbox">
-                    <input type="checkbox" id="balloon-checkbox" name="balloon-checkbox" checked>
-                    <span>Add balloons? 🎈</span>
-                </label>
+                <input type="checkbox" id="balloon-checkbox" name="ballon-checkbox">
+                <label id="balloons" for="balloon-checkbox">Add free balloons? 🎈</label>
             </div>
             <button id="btn" type="button">Calculate</button>
-            <div id="error" class="highlight"></div>
+            <div id="error" class="highlight hide"></div>
+            <div id="confirm-msg"></div>
         </form>
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
         <script src="index.js"></script>
